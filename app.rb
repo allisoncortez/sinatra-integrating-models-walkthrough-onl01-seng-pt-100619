@@ -7,13 +7,14 @@ class App < Sinatra::Base
   end
 
   post '/' do
-    text_from_user = params[:user_text]
+    #long version
+    # text_from_user = params[:user_text]
     
-    @analyzed_text = TextAnalyzer.new(text_from_user)
+    # @analyzed_text = TextAnalyzer.new(text_from_user)
 
 
 #shortened version of lines 10 and 12
-#@analyzed_text = TextAnalyzer.new(params[:user_text])
+@analyzed_text = TextAnalyzer.new(params[:user_text])
 
 
     erb :results
